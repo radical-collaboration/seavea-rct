@@ -111,9 +111,9 @@ export RADICAL_SMT=1
 
 `./rp_app.py` (or `python rp_app.py`) or run it in the background as
 `nohup python rp_app.py > OUTPUT 2>&1 </dev/null &`
+
 It creates directories with log and traces information, which is referred as
 sandboxes:
-
 - **client sandbox** is created within the working directory from where the RP
   application was launched (it is named after the session id);
 - **remote sandboxes** are directories created on a resource machine and have
