@@ -15,8 +15,7 @@ N_TASKS = 6
 PILOT_DESCRIPTION = {
     'resource' : 'ornl.crusher',
     'project'  : 'CSC449_crusher',
-    'cores'    : 128 * N_NODES,  # 64 cores x SMT = 128
-    'gpus'     : 8,
+    'nodes'    : N_NODES,
     'runtime'  : 15
 }
 
@@ -39,6 +38,8 @@ def main():
                 'cores_per_rank': 10,
                 'threading_type': rp.OpenMP,
                 'gpus_per_rank' : 1,
+                # RP test executable:
+                # https://github.com/radical-cybertools/radical.pilot/blob/devel/bin/radical-pilot-hello.sh
                 'executable'    : 'radical-pilot-hello.sh',
                 'arguments'     : [10]
             }))

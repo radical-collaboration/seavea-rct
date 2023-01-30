@@ -15,8 +15,8 @@ pip install -U pip
 
 ### 1.2. RADICAL-Cybertools (RCT) packages
 
-NOTE: focus on `devel`-branch, which is a release candidate with the new
-      features and fixes for the discovered bugs.
+**NOTE:** focus on `devel`-branch, which is a release candidate with the 
+          latest features and fixes for the discovered bugs.
 ```shell
 pip install git+https://github.com/radical-cybertools/radical.utils.git@devel
 pip install git+https://github.com/radical-cybertools/radical.saga.git@devel
@@ -86,8 +86,11 @@ import radical.pilot as rp
 pd = rp.PilotDescription({
     'resource'     : 'ornl.crusher',  # resource description label
     'project'      : 'XYZ000',        # allocation account
-    'cores'        : 64,              # amount of CPU slots
-    'gpus'         : 8,               # amount of GPU slots
+    'nodes'        : 1,
+    # OR 'cores' (CPU slots) and 'gpus' (GPU slots) could be provided -
+    # it is an old approach, and it still will be converted into nodes 
+    #   'cores'    : 64,
+    #   'gpus'     : 8,
     'runtime'      : 15,              # maximum runtime for a pilot (in minutes)
     'queue'        : 'debug',         # optional 
     'access_schema': 'local'          # optional

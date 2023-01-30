@@ -98,8 +98,8 @@ class Plotter:
         sid = self.sid
         pid = self.data['pid']
 
-        threads_per_core = int(os.environ.get('RADICAL_SMT', 1))
-        # Crusher: SMT={1,2}
+        # Crusher: SMT={1,2} (default value is 2)
+        threads_per_core = int(os.environ.get('RADICAL_SMT', 2))
 
         rtype_info = {
             'cpu': {'label': 'Number of CPU cores',
@@ -183,7 +183,7 @@ def get_args():
     """
     parser = argparse.ArgumentParser(
         description='Create plot of resource utilization for the RP app.',
-        usage='rp_ru_plot.py --sid <session id> '
+        usage='rp_plot_ru.py --sid <session id> '
               '[--input_dir <sessions dir>'
               ' --plot_dir <plots dir>]')
 
