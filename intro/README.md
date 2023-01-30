@@ -98,7 +98,7 @@ pd = rp.PilotDescription({
 #### 2.1.2. Resource description
 
 Crusher resource description is a built-in configuration - 
-[ornl.crusher](https://github.com/radical-cybertools/radical.pilot/blob/docs/nb_section3/src/radical/pilot/configs/resource_ornl.json#L55-L89)
+[ornl.crusher](https://github.com/radical-cybertools/radical.pilot/blob/devel/src/radical/pilot/configs/resource_ornl.json#L55-L89)
 
 RP uses the maximum threads per core (Crusher: `SMT=2`, 128 threads per node 
 in total), but if it is required to force to use only one thread per core then
